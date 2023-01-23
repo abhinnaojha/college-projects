@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*
+{
+    @apply
+        capitalize
+}
+body
+{
+
+}
+
+table
+{
+
+}
+
+button, input[type = submit]
+{
+    @apply
+        border-2
+        rounded-xl
+        cursor-pointer
+        px-3
+        py-1
+        scale-100
+            hover:scale-105
+        bg-green-800
+            hover:bg-green-900
+        text-red-300
+            hover:text-red-200
+        transition
+            duration-200
+}
+h1
+{
+    @apply
+    text-xl
+    p-4
+    m-1
+    text-center
+}
+
+a
+{
+    @apply
+        no-underline
+            hover:underline
+        text-blue-900
+            hover:text-blue-700
+        capitalize
+            hover:uppercase
+        transition
+            duration-200
+
+}
+
+td
+{
+    @apply
+        text-center
+        px-3
+}
+th
+{
+    @apply
+        px-3
+}
+
+input[type=text], input[type=number], select
+{
+    @apply
+        border
+        outline
+        outline-1
+        outline-gray-500
+        rounded
+        bg-gray-100
+        px-3
+}
+
+
+.edit
+{
+    @apply
+        border
+        bg-orange-300
+            hover:bg-orange-400
+        text-black
+            hover:text-black
+}
+.view
+{
+    @apply
+        border
+        bg-violet-200
+            hover:bg-violet-400
+        text-black
+            hover:text-black
+}
+.back
+{
+    @apply
+        border
+        mt-8
+        bg-sky-700
+            hover:bg-sky-900
+        text-white
+            hover:text-white
+}
+

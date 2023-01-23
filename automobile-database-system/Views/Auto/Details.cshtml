@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = @ViewBag.Auto + " " + @ViewBag.id;
+}
+@model automobile_database_system.Models.Auto;
+
+<div>
+    <div class="flex">
+        <div class="flex-centre-horizontal">
+            <table>
+                <tr>
+                    <th>Brand</th>
+                    <td>@Model.Brand</td>
+                </tr>
+                <tr>
+                    <th>Model</th>
+                    <td>@Model.ModelName</td>
+                </tr>
+                <tr>
+                    <th>Build year</th>
+                    <td>@Model.BuildYear</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                    <td>@Model.VehicleType</td>
+                </tr>
+                <tr>
+                    <th>Category</th>
+                    <td>@Model.Category</td>
+                </tr>
+                <tr>
+                    <th>Engine size</th>
+                    <td>@Model.EngineSize</td>
+                </tr>
+                <tr>
+                    <th>Discontinued</th>
+                        
+                    @if(Model.DiscontinuedYear == 0)
+                    {
+                        <td>NA</td>
+                    }
+                    @if(Model.DiscontinuedYear != 0)
+                    {
+                        <td>@Model.DiscontinuedYear</td>
+                    }
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>@Model.Price</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <a asp-controller="Auto" asp-action="Edit" asp-route-id="@Model.Id">
+                            <button>Edit</button>
+                        </a>
+                        <a asp-controller="Auto" asp-action="Delete" asp-route-id="@Model.Id">
+                            <button>Delete</button>
+                        </a>
+                    </td>
+                </tr> 
+            </table>
+        </div>
+    </div>
+</div>
